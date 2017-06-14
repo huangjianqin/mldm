@@ -1,4 +1,4 @@
-# -*- conding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from pyspark import SparkConf, SparkContext
 from pyspark.mllib.classification import SVMWithSGD, SVMModel
 from pyspark.mllib.regression import LabeledPoint
