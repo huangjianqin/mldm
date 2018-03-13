@@ -10,6 +10,6 @@ if __name__ == '__main__':
     jsonO = json.loads(jsonStr)
     jsonStr2 = json.dumps(jsonO)
     jsonStr3 = {"a":1, "b":[{"b1":"b1", "b2":"b2"}]}
-    print jsonStr3['a']
-    print json.dumps(jsonO)
-    print jsonStr2.__eq__(jsonStr)
+    print(jsonStr3['a'])
+    print(json.dumps(jsonO))
+    print(jsonStr2.__eq__(jsonStr))

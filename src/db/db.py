@@ -3,7 +3,7 @@
 
 import logging
 import threading
-import mysql.connector
+import pymysql
 
 class _LazyConnection(threading.local):
     def __init__(self, connection):
@@ -81,7 +81,7 @@ def _select(sql, args):
 def toMysql(user="root", password="", database="", use_unicode=False):
     global _connection
     logging.info("connect to mysql")
-    conn = mysql.connector.connect(user=user, password=password, database=database, use_unicode=use_unicode)
+    conn = pymysql.connect(user=user, password=password, database=database, use_unicode=use_unicode)
     _connection = _LazyConnection(conn)
     return MysqlTemplate()
 
@@ -94,4 +94,4 @@ if __name__ == '__main__':
     template = toMysql(user="root", password="123456", database="filmticketorderingsystem", use_unicode=True)
     values = template.select("select * from film_session where price = ?", 11)
     for value in values:
-        print value[1]
+        print(value[1])

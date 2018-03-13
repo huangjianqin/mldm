@@ -6,8 +6,8 @@
 import csv
 
 if __name__ == '__main__':
-    print csv.list_dialects
+    print(csv.list_dialects)
     with open('airlineData.csv', "rb") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            print row['WORK_CITY']
+            print(row['WORK_CITY'])
