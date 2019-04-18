@@ -6,4 +6,3 @@ if __name__ == "__main__":
     db = client.get_database("test")
     colloction = db.get_collection("c1")
     print(colloction.insert({"a":2, "b":1}))
-

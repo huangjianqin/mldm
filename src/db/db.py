@@ -3,6 +3,8 @@
 
 import logging
 import threading
+from functools import wraps
+
 import pymysql
 
 class _LazyConnection(threading.local):
@@ -37,7 +39,7 @@ class _LazyConnection(threading.local):
 
 _connection = None
 
-class _TransactionConnection(object):
+class _Transactional(object):
     def commit(self):
         logging.info("commit")
         try:
@@ -61,9 +63,10 @@ class _TransactionConnection(object):
             self.rollback()
 
 def _with_transaction(func):
+    @wraps(func)
     def wrapper(*args, **kwargs):
         logging.info("call decorator")
-        with _TransactionConnection():
+        with _Transactional():
             return func(*args, **kwargs)
     return wrapper
 
