@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # Created on 2018/6/1 22:47 
-# Project: MLandDM
+# Project: MLAndDM
 # Author: huangjianqin
 import numpy
 

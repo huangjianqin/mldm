@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # Created on 2018/3/16 11:15 
-# Project: MLandDM
+# Project: MLAndDM
 # Author: huangjianqin
 import inspect
 from functools import wraps

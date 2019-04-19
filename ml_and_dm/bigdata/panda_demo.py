@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # Created on 2018/6/4 21:34 
-# Project: MLandDM
+# Project: MLAndDM
 # Author: huangjianqin
 import math
 import pandas as pd

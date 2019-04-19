@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # Created on 2018/5/30 22:55 
-# Project: MLandDM
+# Project: MLAndDM
 # Author: huangjianqin
 import inspect
 
 #其实也可以自定一个函数签名(Signature, 构造函数需要Parameter实例),然后匹配合适的函数参数
 from functools import wraps
 
-from src.baselearn import typeassert
+from ml_and_dm.baselearn import typeassert
 
 if __name__ == '__main__':
     @typeassert(int, str)
