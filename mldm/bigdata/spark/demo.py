@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # Created on 2018/5/31 17:48 
-# Project: MLAndDM
+# Project: mldm
 # Author: huangjianqin
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SparkSession
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     # df1.show()
 
     schema = StructType([StructField("name", StringType(), True), StructField("age", IntegerType(), True)])
-    userDF = ss.readStream.schema(schema).json("/Users/hjq/pythonapp/MLAndDM/data")
+    userDF = ss.readStream.schema(schema).json("/Users/hjq/pythonapp/mldm/data")
     userDF.select("name")
     query = userDF.writeStream.format("console").start()
     print(query.recentProgress)

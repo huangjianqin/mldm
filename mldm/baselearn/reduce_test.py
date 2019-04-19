@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # Created on 2018/5/30 22:55 
-# Project: MLAndDM
+# Project: mldm
 # Author: huangjianqin
 from functools import reduce
 

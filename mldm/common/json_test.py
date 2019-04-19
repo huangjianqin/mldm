@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Created on 2017/9/3 21:54
-# Project: MLAndDM
+# Project: mldm
 # Author: huangjianqin
 import json
 
