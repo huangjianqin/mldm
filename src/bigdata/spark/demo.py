@@ -32,7 +32,7 @@ if __name__ == '__main__':
     # df1.show()
 
     schema = StructType([StructField("name", StringType(), True), StructField("age", IntegerType(), True)])
-    userDF = ss.readStream.schema(schema).json("/Users/hjq/pythonapp/MLandDM/test")
+    userDF = ss.readStream.schema(schema).json("/Users/hjq/pythonapp/MLandDM/data")
     userDF.select("name")
     query = userDF.writeStream.format("console").start()
     print(query.recentProgress)
